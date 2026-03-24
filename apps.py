@@ -7,7 +7,7 @@ st.subheader("practice llm")
 
 user_input = st.text_area(
     "Enter your prompt",
-    placeholder ="what is an animal?"3
+    placeholder ="what is an animal?"
 )
 
 if st.button("Send prompt"):
