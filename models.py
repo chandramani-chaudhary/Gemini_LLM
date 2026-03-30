@@ -1,10 +1,12 @@
 import os
-from google import genai
+import google.generativeai as genai
 
-client = genai.Client(api_key="AIzaSyB2-x303ZdbmYGtXtgeIFtH8vcim3AC1PU")
-def gemini_llm(text):
-    response = client.models.generate_content(
-        model="gemini-3-flash-preview",
-        contents=text,
-    )
-    return response.text
+import google.generativeai as genai
+
+genai.configure(api_key="AIzaSyAx8SB6BDGDZnj1IQTs26JqBXQXqAnxyT8")
+
+model = genai.GenerativeModel("gemini-pro")
+
+response = model.generate_content("Hello")
+
+print(response.text)
